@@ -1,11 +1,11 @@
 {
   "slug": "financial-modeling",
   "title": "financial-modeling",
-  "description": "",
+  "description": "TBD",
   "metric": "score",
   "direction": "maximize",
   "evaluator_version": "v1",
-  "closes_at": null,
+  "closes_at": "2026-11-30T23:59:59Z",
   "accepting_submissions": false,
   "service_url": "https://script.google.com/macros/s/AKfycbx6Yp3miD01oPuE1SgOLZUtO0KbLMiRUKU7tO1cRX3qK5Wt0lQipa9FB9-HcCWIP5Gj/exec",
   "submit_url": "https://script.google.com/macros/s/AKfycbx6Yp3miD01oPuE1SgOLZUtO0KbLMiRUKU7tO1cRX3qK5Wt0lQipa9FB9-HcCWIP5Gj/exec?challenge=financial-modeling"
