@@ -1,0 +1,9 @@
+# Python 3.12, Linux x86_64. CPU reference environment; no downloads during runs.
+torch==2.8.0+cpu
+torchvision==0.23.0+cpu
+stable-pretraining==0.1.8
+stable-worldmodel[train,format]==0.1.1
+scikit-learn==1.7.2
+numpy==2.2.6
+onnx==1.19.0
+onnxruntime==1.23.0

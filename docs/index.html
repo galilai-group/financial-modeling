@@ -2,13 +2,24 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Challenge leaderboard</title><link rel="stylesheet" href="style.css">
 <script src="leaderboard.js" defer></script></head><body><main>
-<p class="eyebrow">RESEARCH CHALLENGE</p>
-<div class="topline"><h1 id="title">Leaderboard</h1><a id="submit" class="button" hidden>Submit checkpoint</a></div>
-<p id="description"></p><p class="muted" id="details"></p>
-<section class="card"><div class="topline"><h2>Leaderboard</h2>
+<header class="hero"><img id="banner" class="banner" alt="" hidden referrerpolicy="no-referrer"><div class="hero-content"><img id="logo" class="logo" alt="Challenge logo" hidden referrerpolicy="no-referrer">
+<p class="eyebrow">RESEARCH CHALLENGE · <span id="organizer">galilai-group</span></p><span id="challenge-state" class="badge">Loading</span>
+<div class="topline"><h1 id="title">Leaderboard</h1><a id="submit" class="button" hidden>Submit compiled model</a></div>
+<p id="description"></p><p><a id="training-data" class="button" target="_blank" rel="noopener noreferrer" hidden>Training data on Google Drive</a></p><p class="muted" id="details"></p>
+</div></header>
+<div id="content-tabs" class="content-tabs" role="tablist" aria-label="Challenge content" hidden><button id="overview-tab" type="button" role="tab" aria-controls="overview-panel" aria-selected="true">Challenge</button><button id="examples-tab" type="button" role="tab" aria-controls="examples-panel" aria-selected="false" tabindex="-1">Examples</button></div>
+<div id="overview-panel" role="tabpanel" aria-labelledby="overview-tab">
+<nav class="page-nav" aria-label="Challenge sections"><a href="#leaderboard">Leaderboard</a><a href="#rules">Rules &amp; evaluation</a><a href="#timeline">Timeline</a></nav>
+<section class="card" id="timeline" hidden><h2>Challenge timeline</h2><ol id="timeline-dates" class="timeline"></ol></section>
+<section class="card" id="leaderboard"><div class="topline"><h2>Leaderboard</h2>
 <input type="search" id="search" aria-label="Find a participant" placeholder="Find participant…"></div>
-<p class="muted" id="policy"></p><div class="table-wrap"><table>
-<thead><tr><th scope="col">Rank</th><th scope="col">Participant</th><th scope="col" id="metric">Score</th><th scope="col">Submitted</th></tr></thead>
+<label for="group-filter">Filter by group</label><select id="group-filter"><option value="">All participants</option></select><p class="muted" id="updated"></p><p class="muted" id="policy"></p><div class="table-wrap"><table>
+<thead><tr id="columns"></tr></thead>
 <tbody id="rows"></tbody></table></div><p id="status" role="status">Loading scores…</p></section>
-<p class="muted">Email addresses and checkpoints are private. Scores update after the organizers run evaluation.</p>
-</main></body></html>
+<section class="card" id="rules"><h2>Rules &amp; evaluation</h2><div id="rule-sections" class="rule-grid"></div><p id="submission-rules" class="muted"></p></section>
+<section class="card" id="training-section" hidden><h2>Reproduce your training</h2><p id="training-policy"></p><p><button id="download-environment" type="button">Download development environment</button> <span id="environment-status" role="status"></span></p><p><a href="environment/README.md">Development environment &amp; instructions</a> · <a href="environment/requirements.lock" download>Dependency lock</a> · <a href="environment/Dockerfile" download>Dockerfile</a> · <a href="environment/main.py" download>Example main.py</a></p><p class="muted">Source-derived scores are shown in green next to the original model scores. Official ranks use the original scores. A green check records successful source execution and evaluation; it is not a certification of data-policy compliance or an exact score match.</p></section>
+<p class="muted" id="identity-policy"></p><p class="muted">Submit a compiled model artifact, not a weights-only checkpoint requiring a separate architecture definition. The challenge evaluator determines the supported format.</p>
+</div>
+<section id="examples-panel" class="card" role="tabpanel" aria-labelledby="examples-tab" hidden><div class="topline"><h2 id="example-heading">Getting started</h2><div class="example-actions"><button id="copy-example" type="button">Copy code</button><button id="download-example" type="button">Download .py</button></div></div><p id="example-description"></p><div class="code-window"><div class="code-caption">Python · example.py</div><pre tabindex="0" aria-label="Python example"><code id="example-code"></code></pre></div><p id="example-feedback" role="status"></p></section>
+<dialog id="logs-dialog"><div class="topline"><h2>Evaluation logs</h2><button id="close-logs" type="button">Close</button></div><p id="log-submission" class="muted"></p><pre id="log-content"></pre><p class="muted">Correct the compiled model and submit again. These diagnostics are public; full process logs are private to the organizers.</p></dialog>
+<footer>Hosted by <a href="https://github.com/galilai-group" target="_blank" rel="noopener noreferrer">galilai-group</a> · Stable Challenge</footer></main></body></html>

@@ -1,8 +1,13 @@
 {
+  "anonymous": true,
+  "groups": [],
   "metric": "score",
+  "metrics": [
+    "score"
+  ],
   "direction": "maximize",
   "evaluator_version": "v1",
   "rows": [],
-  "revision": 1,
-  "updated_at": "2026-09-06T21:52:26.501Z"
+  "revision": 2,
+  "updated_at": "2026-09-07T01:28:29.799Z"
 }
